@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173b32">
+  <meta name="description" content="Find Quran verses for the moments, questions, and feelings life brings.">
+  <title>Noor – Quran for Every Moment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" id="home">
+    <div class="nav-wrap">
+      <a class="brand" href="#home" aria-label="Noor home"><span class="brand-mark" aria-hidden="true">ن</span><span class="brand-name">Noor<span class="brand-tagline">Quran for Every Moment</span></span></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span><span></span></button>
+      <nav class="primary-nav" id="primary-navigation" aria-label="Main navigation">
+        <a href="#home">Home</a><a href="#categories">Categories</a><a href="#reminder">Random Verse</a><a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-pattern" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-rule"></span>A place to return to</p>
+          <h1 id="hero-title">Whatever your heart is going through, <em>turn to the Qur’an.</em></h1>
+          <p class="hero-description">Find a verse for the moment you’re in: a little comfort, a reminder of hope, or guidance for the road ahead.</p>
+          <a class="button button-light" href="#categories">Explore verses <span aria-hidden="true">↘</span></a>
+        </div>
+        <div class="hero-verse" aria-label="A verse from the Quran">
+          <span class="hero-ornament" aria-hidden="true">۞</span>
+          <p class="arabic-text hero-arabic" lang="ar" dir="rtl">فَإِنَّ مَعَ الْعُسْرِ يُسْرًا</p>
+          <p class="hero-translation">“For indeed, with hardship [will be] ease [i.e., relief].”</p>
+          <a href="https://quran.com/94/5" target="_blank" rel="noreferrer">Ash-Sharh 94:5 <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="hero-bottomline" aria-hidden="true"><span>Read · Reflect · Return</span><span>01 / 10</span></div>
+    </section>
+    <section class="daily-section section-pad" aria-labelledby="daily-title">
+      <div class="section-heading daily-heading"><p class="eyebrow eyebrow-green">A moment for today</p><h2 id="daily-title">Verse of the day</h2><p>A small pause, guided by the Qur’an.</p></div>
+      <div class="daily-verse" id="daily-verse" aria-live="polite"></div>
+    </section>
+    <section class="categories-section section-pad" id="categories" aria-labelledby="categories-title">
+      <div class="section-heading section-heading-row"><div><p class="eyebrow eyebrow-green">Find what you need</p><h2 id="categories-title">A verse for this moment</h2><p>Choose a feeling or intention to explore related verses.</p></div><span class="section-index" aria-hidden="true">01 <i></i> 10</span></div>
+      <div class="category-grid" id="category-grid"></div>
+    </section>
+    <section class="verses-section section-pad" id="verses" aria-labelledby="verses-title">
+      <div class="section-heading section-heading-row verse-heading"><div><p class="eyebrow eyebrow-green">Words to carry with you</p><h2 id="verses-title">Explore verses</h2><p id="active-filter-label">Browse the collection or search for a topic.</p></div><button class="text-button clear-filter" id="clear-filter" type="button">Clear filters <span aria-hidden="true">×</span></button></div>
+      <form class="search-form" role="search" onsubmit="return false"><label class="visually-hidden" for="verse-search">Search the verse collection</label><span class="search-icon" aria-hidden="true">⌕</span><input id="verse-search" type="search" placeholder="Search for a topic, feeling, or verse..." autocomplete="off"><span class="search-hint" aria-hidden="true">Search</span></form>
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+      <div class="verse-grid" id="verse-results" aria-live="polite"></div>
+    </section>
+    <section class="reminder-section" id="reminder" aria-labelledby="reminder-title">
+      <div class="reminder-pattern" aria-hidden="true"></div>
+      <div class="reminder-inner"><div><p class="eyebrow eyebrow-light">A pause in your day</p><h2 id="reminder-title">Need a reminder?</h2><p>Let a verse find you where you are.</p><button class="button button-light" id="random-button" type="button">Show me a verse <span aria-hidden="true">↗</span></button></div><div class="random-result" id="random-result" aria-live="polite"><p class="random-placeholder">Your reminder will appear here.</p></div></div>
+    </section>
+    <section class="saved-section section-pad" id="saved" aria-labelledby="saved-title">
+      <div class="section-heading section-heading-row"><div><p class="eyebrow eyebrow-green">Kept close</p><h2 id="saved-title">Saved verses <span class="saved-total" id="saved-total">0</span></h2><p>Your saved reminders stay on this device.</p></div></div>
+      <div class="verse-grid saved-grid" id="saved-verses" aria-live="polite"></div>
+    </section>
+    <section class="about-section section-pad" id="about" aria-labelledby="about-title">
+      <div class="about-mark" aria-hidden="true">ن</div>
+      <div class="about-copy"><p class="eyebrow eyebrow-green">The intention behind Noor</p><h2 id="about-title">A gentle way back to the words that matter.</h2><p>Noor is a simple Quranic resource designed to help people turn to the Qur’an during different moments in life — whether they are seeking comfort, hope, forgiveness, patience, gratitude, guidance, or a reminder of the Hereafter.</p><p class="about-note">Arabic text and English translations are presented separately. Translations are interpretations of meaning; consult the Qur’an and trusted scholarship for fuller context.</p></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-main"><a class="brand footer-brand" href="#home" aria-label="Noor home"><span class="brand-mark" aria-hidden="true">ن</span><span class="brand-name">Noor<span class="brand-tagline">A reminder to turn to the Qur’an.</span></span></a><nav class="footer-nav" aria-label="Footer navigation"><a href="#home">Home</a><a href="#categories">Categories</a><a href="#reminder">Random verse</a><a href="#about">About</a></nav></div><div class="footer-bottom"><span>© <span id="current-year"></span> Noor</span><span>Arabic and translations sourced from Quran.com · Saheeh International</span></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
